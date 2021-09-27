@@ -17,9 +17,9 @@ steps:
 
 - script: |
     echo "I am here"
-    env-cmd -f ./env.example.js
     npm install
-
+    npm install -g env-cmd
+    env-cmd -f ./env.example.js
     echo "After npm install"
     npm run build
   displayName: 'npm install and build'
